@@ -25,8 +25,8 @@ public class Product {
     private String description;
     @Column(nullable = false)
     private String size;
-    @ManyToOne
-    private Photo photo_id;
+    @ManyToMany
+    private List<Photo> photo_id;
     @Column(unique = true)
     private String price;
     @CreatedDate
@@ -36,6 +36,6 @@ public class Product {
     @ManyToMany
     private List<Like> like_id;
 
-    @ManyToOne
-    private Cart_Items cart_items;
+    @ManyToMany
+    private List<Cart_Items> cart_items;
 }

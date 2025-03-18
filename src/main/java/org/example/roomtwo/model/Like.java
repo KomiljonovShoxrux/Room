@@ -9,7 +9,7 @@ import org.springframework.data.annotation.CreatedDate;
 
 import java.time.LocalDateTime;
 
-@Entity
+@Entity(name = "likes")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor

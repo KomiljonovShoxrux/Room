@@ -17,11 +17,11 @@ public class Cart_Items {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @OneToMany
+    @ManyToMany
     private List<Product> product_id;
 
     private String sub_total;
-    @ManyToOne
+    @OneToOne
     private Card card_id;
 
 }

@@ -60,8 +60,8 @@ public class ProductService {
 
 
         product.setLike_id((List<Like>) like);
-        product.setPhoto_id(photo);
-        product.setCart_items(cartItems);
+        product.setPhoto_id((List<Photo>) photo);
+        product.setCart_items((List<Cart_Items>) cartItems);
         productRepo.save(product);
         return new Result(true, "Product created");
 
@@ -88,8 +88,8 @@ public class ProductService {
             Cart_Items cartItems = cartItemsOptional.get();
 
             product.setLike_id((List<Like>) like);
-            product.setPhoto_id(photo);
-            product.setCart_items(cartItems);
+            product.setPhoto_id((List<Photo>) photo);
+            product.setCart_items((List<Cart_Items>) cartItems);
             productRepo.save(product);
             return new Result(true, "Product updated");
         }
