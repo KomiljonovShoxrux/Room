@@ -7,6 +7,8 @@ import org.example.roomtwo.model.Result;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/product")
 public class ProductController {
@@ -15,8 +17,8 @@ public class ProductController {
     ProductService productService;
 
     @GetMapping
-    public ProductService getProductService() {
-        return productService;
+    public List<Product> getProductService() {
+        return productService.getAllProducts();
     }
     @GetMapping("/{id}")
     public Product getbyid (@PathVariable Integer id) {
