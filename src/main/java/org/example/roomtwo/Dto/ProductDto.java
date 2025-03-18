@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.example.roomtwo.model.Cart_Items;
 import org.example.roomtwo.model.Like;
 import org.example.roomtwo.model.entity.Status;
 import org.example.roomtwo.model.Photo;
@@ -31,6 +32,7 @@ public class ProductDto {
     private Status status;
     @ManyToMany
     private Integer like_id;
-    @Column(nullable = false)
-    private String cart_items;
+
+    @ManyToOne
+    private Integer cart_items;
 }

@@ -35,6 +35,7 @@ public class Product {
     private Status status;
     @ManyToMany
     private List<Like> like_id;
-    @Column(nullable = false)
-    private String cart_items;
+
+    @ManyToOne
+    private Cart_Items cart_items;
 }
